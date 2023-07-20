@@ -1,0 +1,45 @@
+{
+  "name": "web-static",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.7.15",
+    "@heroicons/react": "^2.0.18",
+    "common-utils": "*",
+    "gsap": "^3.12.2",
+    "lottie-react-web": "^2.2.2",
+    "next": "13.4.10",
+    "next-pwa": "^5.6.0",
+    "next-seo": "^6.1.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-gsap": "^3.2.1",
+    "react-slick": "^0.29.0",
+    "react-text-transition": "^3.0.2",
+    "slick-carousel": "^1.8.1",
+    "swr": "^2.2.0",
+    "ui": "*"
+  },
+  "devDependencies": {
+    "@types/node": "20.4.2",
+    "@types/react": "18.2.15",
+    "@types/react-lottie": "^1.2.6",
+    "@types/react-slick": "^0.23.10",
+    "autoprefixer": "^10.4.0",
+    "config": "*",
+    "eslint": "8.45.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "next-transpile-modules": "10.0.0",
+    "postcss": "^8.4.26",
+    "prettier": "^3.0.0",
+    "tailwindcss": "^3.3.3",
+    "tsconfig": "*",
+    "typescript": "^5.1.6"
+  }
+}

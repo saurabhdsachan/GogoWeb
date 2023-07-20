@@ -1,0 +1,419 @@
+if (!self.define) {
+  let e,
+    n = {};
+  const s = (s, i) => (
+    (s = new URL(s + '.js', i).href),
+    n[s] ||
+      new Promise((n) => {
+        if ('document' in self) {
+          const e = document.createElement('script');
+          (e.src = s), (e.onload = n), document.head.appendChild(e);
+        } else (e = s), importScripts(s), n();
+      }).then(() => {
+        let e = n[s];
+        if (!e) throw new Error(`Module ${s} didn’t register its module`);
+        return e;
+      })
+  );
+  self.define = (i, c) => {
+    const a =
+      e ||
+      ('document' in self ? document.currentScript.src : '') ||
+      location.href;
+    if (n[a]) return;
+    let o = {};
+    const t = (e) => s(e, a),
+      r = { module: { uri: a }, exports: o, require: t };
+    n[a] = Promise.all(i.map((e) => r[e] || t(e))).then((e) => (c(...e), o));
+  };
+}
+define(['./workbox-c5ed321c'], function (e) {
+  'use strict';
+  importScripts(),
+    self.skipWaiting(),
+    e.clientsClaim(),
+    e.precacheAndRoute(
+      [
+        {
+          url: '/_next/static/HnAYPW04E1CeQKqN_a0ml/_buildManifest.js',
+          revision: '2d2933346a0da500a526f0f59be56de1',
+        },
+        {
+          url: '/_next/static/HnAYPW04E1CeQKqN_a0ml/_ssgManifest.js',
+          revision: 'b6652df95db52feb4daf4eca35380933',
+        },
+        {
+          url: '/_next/static/chunks/734-be35688059d83fc0.js',
+          revision: 'be35688059d83fc0',
+        },
+        {
+          url: '/_next/static/chunks/94a7ad86-de0047dc3e76a00e.js',
+          revision: 'de0047dc3e76a00e',
+        },
+        {
+          url: '/_next/static/chunks/d2e5aab3-1a0563bc6bc6b454.js',
+          revision: '1a0563bc6bc6b454',
+        },
+        {
+          url: '/_next/static/chunks/framework-19f3649580393c10.js',
+          revision: '19f3649580393c10',
+        },
+        {
+          url: '/_next/static/chunks/main-59cbe6eb87915643.js',
+          revision: '59cbe6eb87915643',
+        },
+        {
+          url: '/_next/static/chunks/pages/_app-d4def9442761176a.js',
+          revision: 'd4def9442761176a',
+        },
+        {
+          url: '/_next/static/chunks/pages/_error-d11cb7facb2c59a4.js',
+          revision: 'd11cb7facb2c59a4',
+        },
+        {
+          url: '/_next/static/chunks/pages/index-d71579a8c3002dc8.js',
+          revision: 'd71579a8c3002dc8',
+        },
+        {
+          url: '/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js',
+          revision: '837c0df77fd5009c9e46d446188ecfd0',
+        },
+        {
+          url: '/_next/static/chunks/webpack-1e9d3f973bd7f51f.js',
+          revision: '1e9d3f973bd7f51f',
+        },
+        {
+          url: '/_next/static/css/55c9b9de83c3295d.css',
+          revision: '55c9b9de83c3295d',
+        },
+        {
+          url: '/_next/static/css/66c50f9f81932985.css',
+          revision: '66c50f9f81932985',
+        },
+        {
+          url: '/_next/static/media/4198a8710a8b9c4d-s.p.woff2',
+          revision: '1ac1a288042932bb396994730e005504',
+        },
+        {
+          url: '/_next/static/media/4d6b51d3d6729231-s.p.woff2',
+          revision: '8bad5e80040389cf29952fa8621b7987',
+        },
+        {
+          url: '/_next/static/media/80a3a0131d7d65fc-s.p.woff2',
+          revision: '4e24eee4439797b8aa4d8cb69e2208e3',
+        },
+        {
+          url: '/_next/static/media/b7c5dc57347b7a04-s.p.woff2',
+          revision: 'ffb07c1bc1c485f7d17b1ad3180864c6',
+        },
+        { url: '/favicon.ico', revision: 'f24e15c909f9382b57d0e8a593d8edbc' },
+        {
+          url: '/fonts/ArticulatCF-Bold.woff2',
+          revision: '4e24eee4439797b8aa4d8cb69e2208e3',
+        },
+        {
+          url: '/fonts/ArticulatCF-DemiBold.woff2',
+          revision: 'ffb07c1bc1c485f7d17b1ad3180864c6',
+        },
+        {
+          url: '/fonts/ArticulatCF-Medium.woff2',
+          revision: '1ac1a288042932bb396994730e005504',
+        },
+        {
+          url: '/fonts/ArticulatCF-Regular.woff2',
+          revision: '8bad5e80040389cf29952fa8621b7987',
+        },
+        {
+          url: '/icons/android-icon-144x144.png',
+          revision: 'd7cfc5eb994a872e494f9c0f5ad86da4',
+        },
+        {
+          url: '/icons/android-icon-192x192.png',
+          revision: '0780cf1bfdbc3fb98b7be620c713a235',
+        },
+        {
+          url: '/icons/android-icon-36x36.png',
+          revision: '62bdf661b711884ebe407f7a85c3d02d',
+        },
+        {
+          url: '/icons/android-icon-48x48.png',
+          revision: 'ff59f2be7628f73d7237bad9c7d4d646',
+        },
+        {
+          url: '/icons/android-icon-72x72.png',
+          revision: 'edd37120851f6278c0cf2b8749fa1bb5',
+        },
+        {
+          url: '/icons/android-icon-96x96.png',
+          revision: 'a69f14e117fbe56eb3c47cba6f07f5dd',
+        },
+        {
+          url: '/icons/apple-icon-114x114.png',
+          revision: '9fdacee0e1f3900aaf93dbd5b9b63184',
+        },
+        {
+          url: '/icons/apple-icon-120x120.png',
+          revision: '1f9a7a5d755389042839e3b126ddb1d2',
+        },
+        {
+          url: '/icons/apple-icon-144x144.png',
+          revision: 'd7cfc5eb994a872e494f9c0f5ad86da4',
+        },
+        {
+          url: '/icons/apple-icon-152x152.png',
+          revision: 'aed484069d4d1fa42c84fe3caf344b01',
+        },
+        {
+          url: '/icons/apple-icon-180x180.png',
+          revision: 'd657f7667d3fe37120670d68e56041cd',
+        },
+        {
+          url: '/icons/apple-icon-57x57.png',
+          revision: '259583ca4bd61dc1f9fe403056d4b3cc',
+        },
+        {
+          url: '/icons/apple-icon-60x60.png',
+          revision: 'd36e9446425775ca3a6912e2217b1cb4',
+        },
+        {
+          url: '/icons/apple-icon-72x72.png',
+          revision: 'edd37120851f6278c0cf2b8749fa1bb5',
+        },
+        {
+          url: '/icons/apple-icon-76x76.png',
+          revision: '2344733721b61112d787f6bce559b390',
+        },
+        {
+          url: '/icons/apple-icon-precomposed.png',
+          revision: 'd178863e30c667e5e3bb648086cd4312',
+        },
+        {
+          url: '/icons/apple-icon.png',
+          revision: 'd178863e30c667e5e3bb648086cd4312',
+        },
+        {
+          url: '/icons/browserconfig.xml',
+          revision: '653d077300a12f09a69caeea7a8947f8',
+        },
+        {
+          url: '/icons/favicon-16x16.png',
+          revision: '054ecc22f69ebbb68a03d03f04a04110',
+        },
+        {
+          url: '/icons/favicon-32x32.png',
+          revision: '44edf4b62d42f6abb4655fcd04216abe',
+        },
+        {
+          url: '/icons/favicon-96x96.png',
+          revision: 'a69f14e117fbe56eb3c47cba6f07f5dd',
+        },
+        {
+          url: '/icons/ms-icon-144x144.png',
+          revision: 'd7cfc5eb994a872e494f9c0f5ad86da4',
+        },
+        {
+          url: '/icons/ms-icon-150x150.png',
+          revision: 'ec5d6094b9628ef0ef03b2ed73f6d78c',
+        },
+        {
+          url: '/icons/ms-icon-310x310.png',
+          revision: 'f12e03568a5da8ff6723f192815361e2',
+        },
+        {
+          url: '/icons/ms-icon-70x70.png',
+          revision: '6d71224263aa06fc5b9fbfbd27a46fbd',
+        },
+        {
+          url: '/images/bg-base-64.js',
+          revision: 'f1c476c0d533d8829286e0215b9a93f8',
+        },
+        {
+          url: '/lotties/empty.json',
+          revision: 'f022311a3c7d4e4df73368fa69808185',
+        },
+        {
+          url: '/lotties/loading.json',
+          revision: 'f69bf496c78e3261be15b96e17d4b2d1',
+        },
+        { url: '/manifest.json', revision: '3fa2853454d7c43f2ad0e959d3929edb' },
+      ],
+      { ignoreURLParametersMatching: [] }
+    ),
+    e.cleanupOutdatedCaches(),
+    e.registerRoute(
+      '/',
+      new e.NetworkFirst({
+        cacheName: 'start-url',
+        plugins: [
+          {
+            cacheWillUpdate: async ({
+              request: e,
+              response: n,
+              event: s,
+              state: i,
+            }) =>
+              n && 'opaqueredirect' === n.type
+                ? new Response(n.body, {
+                    status: 200,
+                    statusText: 'OK',
+                    headers: n.headers,
+                  })
+                : n,
+          },
+        ],
+      }),
+      'GET'
+    ),
+    e.registerRoute(
+      /^https:\/\/fonts\.(?:gstatic)\.com\/.*/i,
+      new e.CacheFirst({
+        cacheName: 'google-fonts-webfonts',
+        plugins: [
+          new e.ExpirationPlugin({ maxEntries: 4, maxAgeSeconds: 31536e3 }),
+        ],
+      }),
+      'GET'
+    ),
+    e.registerRoute(
+      /^https:\/\/fonts\.(?:googleapis)\.com\/.*/i,
+      new e.StaleWhileRevalidate({
+        cacheName: 'google-fonts-stylesheets',
+        plugins: [
+          new e.ExpirationPlugin({ maxEntries: 4, maxAgeSeconds: 604800 }),
+        ],
+      }),
+      'GET'
+    ),
+    e.registerRoute(
+      /\.(?:eot|otf|ttc|ttf|woff|woff2|font.css)$/i,
+      new e.StaleWhileRevalidate({
+        cacheName: 'static-font-assets',
+        plugins: [
+          new e.ExpirationPlugin({ maxEntries: 4, maxAgeSeconds: 604800 }),
+        ],
+      }),
+      'GET'
+    ),
+    e.registerRoute(
+      /\.(?:jpg|jpeg|gif|png|svg|ico|webp)$/i,
+      new e.StaleWhileRevalidate({
+        cacheName: 'static-image-assets',
+        plugins: [
+          new e.ExpirationPlugin({ maxEntries: 64, maxAgeSeconds: 86400 }),
+        ],
+      }),
+      'GET'
+    ),
+    e.registerRoute(
+      /\/_next\/image\?url=.+$/i,
+      new e.StaleWhileRevalidate({
+        cacheName: 'next-image',
+        plugins: [
+          new e.ExpirationPlugin({ maxEntries: 64, maxAgeSeconds: 86400 }),
+        ],
+      }),
+      'GET'
+    ),
+    e.registerRoute(
+      /\.(?:mp3|wav|ogg)$/i,
+      new e.CacheFirst({
+        cacheName: 'static-audio-assets',
+        plugins: [
+          new e.RangeRequestsPlugin(),
+          new e.ExpirationPlugin({ maxEntries: 32, maxAgeSeconds: 86400 }),
+        ],
+      }),
+      'GET'
+    ),
+    e.registerRoute(
+      /\.(?:mp4)$/i,
+      new e.CacheFirst({
+        cacheName: 'static-video-assets',
+        plugins: [
+          new e.RangeRequestsPlugin(),
+          new e.ExpirationPlugin({ maxEntries: 32, maxAgeSeconds: 86400 }),
+        ],
+      }),
+      'GET'
+    ),
+    e.registerRoute(
+      /\.(?:js)$/i,
+      new e.StaleWhileRevalidate({
+        cacheName: 'static-js-assets',
+        plugins: [
+          new e.ExpirationPlugin({ maxEntries: 32, maxAgeSeconds: 86400 }),
+        ],
+      }),
+      'GET'
+    ),
+    e.registerRoute(
+      /\.(?:css|less)$/i,
+      new e.StaleWhileRevalidate({
+        cacheName: 'static-style-assets',
+        plugins: [
+          new e.ExpirationPlugin({ maxEntries: 32, maxAgeSeconds: 86400 }),
+        ],
+      }),
+      'GET'
+    ),
+    e.registerRoute(
+      /\/_next\/data\/.+\/.+\.json$/i,
+      new e.StaleWhileRevalidate({
+        cacheName: 'next-data',
+        plugins: [
+          new e.ExpirationPlugin({ maxEntries: 32, maxAgeSeconds: 86400 }),
+        ],
+      }),
+      'GET'
+    ),
+    e.registerRoute(
+      /\.(?:json|xml|csv)$/i,
+      new e.NetworkFirst({
+        cacheName: 'static-data-assets',
+        plugins: [
+          new e.ExpirationPlugin({ maxEntries: 32, maxAgeSeconds: 86400 }),
+        ],
+      }),
+      'GET'
+    ),
+    e.registerRoute(
+      ({ url: e }) => {
+        if (!(self.origin === e.origin)) return !1;
+        const n = e.pathname;
+        return !n.startsWith('/api/auth/') && !!n.startsWith('/api/');
+      },
+      new e.NetworkFirst({
+        cacheName: 'apis',
+        networkTimeoutSeconds: 10,
+        plugins: [
+          new e.ExpirationPlugin({ maxEntries: 16, maxAgeSeconds: 86400 }),
+        ],
+      }),
+      'GET'
+    ),
+    e.registerRoute(
+      ({ url: e }) => {
+        if (!(self.origin === e.origin)) return !1;
+        return !e.pathname.startsWith('/api/');
+      },
+      new e.NetworkFirst({
+        cacheName: 'others',
+        networkTimeoutSeconds: 10,
+        plugins: [
+          new e.ExpirationPlugin({ maxEntries: 32, maxAgeSeconds: 86400 }),
+        ],
+      }),
+      'GET'
+    ),
+    e.registerRoute(
+      ({ url: e }) => !(self.origin === e.origin),
+      new e.NetworkFirst({
+        cacheName: 'cross-origin',
+        networkTimeoutSeconds: 10,
+        plugins: [
+          new e.ExpirationPlugin({ maxEntries: 32, maxAgeSeconds: 3600 }),
+        ],
+      }),
+      'GET'
+    );
+});
