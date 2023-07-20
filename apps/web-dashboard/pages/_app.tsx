@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           cardType: 'summary_large_image',
         }}
       />
-      <div className={`${PrimaryFont.variable} font-sans`}>
+      <div className={`${PrimaryFont.className} font-sans`}>
         <Component {...pageProps} />
       </div>
     </>

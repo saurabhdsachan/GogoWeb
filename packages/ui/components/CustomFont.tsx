@@ -1,40 +1,15 @@
-import localFont from 'next/font/local';
+import { Outfit } from 'next/font/google';
 
-export const PrimaryFont = localFont({
-  variable: '--font-primary',
+// If loading a variable font, you don't need to specify the font weight
+export const PrimaryFont = Outfit({
+  weight: ['400', '500', '600', '700'],
+  subsets: ['latin'],
+  display: 'swap',
   preload: true,
-  src: [
-    {
-      path: '../Fonts/ArticulatCF-Regular.woff2',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: '../Fonts/ArticulatCF-Medium.woff2',
-      weight: '500',
-      style: 'normal',
-    },
-    {
-      path: '../Fonts/ArticulatCF-DemiBold.woff2',
-      weight: '600',
-      style: 'semibold',
-    },
-    {
-      path: '../Fonts/ArticulatCF-Bold.woff2',
-      weight: '700',
-      style: 'bold',
-    },
-  ],
 });
-
-export const SecondaryFont = localFont({
-  variable: '--font-secondary',
+export const SecondaryFont = Outfit({
+  weight: ['400', '500', '600', '700'],
+  subsets: ['latin'],
+  display: 'swap',
   preload: true,
-  src: [
-    {
-      path: '../Fonts/dmserifdisplay-regular.woff2',
-      weight: '400',
-      style: 'normal',
-    },
-  ],
 });

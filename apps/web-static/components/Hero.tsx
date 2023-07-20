@@ -9,12 +9,12 @@ const Hero = () => {
       <Container>
         <div className="text-center py-20">
           <h1
-            className={`text-6xl font-medium text-gray-200 max-w-3xl mx-auto ${SecondaryFont.variable} font-serif`}
+            className={`text-6xl font-medium text-gray-200 max-w-3xl mx-auto ${SecondaryFont.className} font-serif`}
           >
             Make smart designs quickly
           </h1>
           <h2 className="text-lg text-gray-400 mt-6 max-w-2xl mx-auto">
-            Transform your customer experience with Karigar's AI-powered
+            Transform your customer experience with Karigar&nbsp;s AI-powered
             solutions for acquisition and fulfillment.
           </h2>
         </div>
