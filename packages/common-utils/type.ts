@@ -1,4 +1,10 @@
 export type IFunc = () => void;
+export type IChildren =
+  | string
+  | number
+  | JSX.Element
+  | JSX.Element[]
+  | React.ReactNode;
 
 export enum Sizes {
   XS = 'xs',

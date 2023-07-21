@@ -129,7 +129,7 @@ export const Footer: React.FC = () => {
         </h2>
         <div className="flex flex-col md:flex-row">
           <div className="flex-1 flex justify-center md:justify-start mb-8 md:mb-0">
-            <BrandFull light height={42} width={100} />
+            <BrandFull light size={42} />
           </div>
           <div className="flex-1 flex justify-center md:justify-end space-x-4">
             <Image

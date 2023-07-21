@@ -6,10 +6,12 @@ export const PrimaryFont = Outfit({
   subsets: ['latin'],
   display: 'swap',
   preload: true,
+  variable: '--font-primary',
 });
 export const SecondaryFont = Outfit({
   weight: ['400', '500', '600', '700'],
   subsets: ['latin'],
   display: 'swap',
   preload: true,
+  variable: '--font-secondary',
 });

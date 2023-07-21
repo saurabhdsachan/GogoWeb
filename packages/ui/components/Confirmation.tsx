@@ -5,6 +5,7 @@ import Image from 'next/image';
 import React from 'react';
 
 import { Button } from './Button';
+import { PrimaryFont } from './CustomFont';
 
 export const Confirmation = ({
   open,
@@ -26,7 +27,11 @@ export const Confirmation = ({
   onConfirm?: IFunc;
 }) => {
   return (
-    <Dialog open={open} onClose={onDismiss} className={`relative z-50`}>
+    <Dialog
+      open={open}
+      onClose={onDismiss}
+      className={`relative z-50 ${PrimaryFont.className}`}
+    >
       <div className="fixed inset-0 bg-black/30" aria-hidden="true" />
       <div className="fixed inset-0 flex items-center justify-center">
         <Dialog.Panel className="w-full max-w-sm rounded-2xl p-8 shadow-lg bg-white animate-box-1">
@@ -41,9 +46,7 @@ export const Confirmation = ({
             />
           )}
           <Dialog.Title
-            className={classNames(
-              'text-2xl font-medium mb-2 text-center font-sans'
-            )}
+            className={classNames('text-2xl font-medium mb-2 text-center')}
           >
             {title}
           </Dialog.Title>

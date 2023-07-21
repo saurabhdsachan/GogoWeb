@@ -2,7 +2,7 @@ import { imageLoader } from 'common-utils/helpers';
 import Image from 'next/image';
 import React from 'react';
 
-import { AppFlexyWrapper } from './AppFlexyWrapper';
+import { AppFlexWrapper } from './AppFlexWrapper';
 import { Container } from './Container';
 import { LottieAnimation } from './LottieAnimation';
 
@@ -20,8 +20,8 @@ export const SuccessState = ({
   children?: React.ReactNode;
 }) => {
   return (
-    <AppFlexyWrapper>
-      <AppFlexyWrapper.Body>
+    <AppFlexWrapper>
+      <AppFlexWrapper.Body>
         <Container>
           {!!imageUrl && (
             <Image
@@ -48,8 +48,8 @@ export const SuccessState = ({
             <p className="mt-2 text-base text-gray-500">{subTitle}</p>
           </div>
         </Container>
-      </AppFlexyWrapper.Body>
-      <AppFlexyWrapper.Footer>{children}</AppFlexyWrapper.Footer>
-    </AppFlexyWrapper>
+      </AppFlexWrapper.Body>
+      <AppFlexWrapper.Footer>{children}</AppFlexWrapper.Footer>
+    </AppFlexWrapper>
   );
 };

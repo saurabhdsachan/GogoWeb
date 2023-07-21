@@ -28,16 +28,6 @@ export const PreFooter: React.FC = () => (
             />
           </div>
         </div>
-        <div className="flex-grow flex justify-end">
-          <Image
-            loader={imageLoader}
-            src="v1673512212/beem-web/keep-beemin.png"
-            alt="Market watch"
-            width={1000 * 0.5}
-            height={590 * 0.5}
-            className="object-contain"
-          />
-        </div>
       </div>
     </Container>
   </div>

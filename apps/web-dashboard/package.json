@@ -13,6 +13,7 @@
     "@heroicons/react": "^2.0.18",
     "common-utils": "*",
     "cookies-next": "^2.1.2",
+    "framer-motion": "^10.13.0",
     "js-cookie": "^3.0.5",
     "lottie-react-web": "^2.2.2",
     "mobx": "^6.10.0",
@@ -29,6 +30,7 @@
     "react-otp-input": "^3.0.2",
     "react-responsive-datepicker": "^1.0.6",
     "react-spring-bottom-sheet": "^3.4.1",
+    "recharts": "^2.7.2",
     "turbo": "^1.10.9",
     "typescript": "5.1.6",
     "ui": "*"
@@ -51,6 +53,6 @@
     "prettier": "^3.0.0",
     "tailwindcss": "^3.3.3",
     "tsconfig": "*",
-    "typescript": "^4.5.3"
+    "typescript": "^5.1.6"
   }
 }

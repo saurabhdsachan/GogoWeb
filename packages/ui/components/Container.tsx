@@ -1,5 +1,6 @@
+import { IChildren } from 'common-utils/type';
 import React from 'react';
 
-export const Container = ({ children }: { children: React.ReactNode }) => {
+export const Container = ({ children }: { children: IChildren }) => {
   return <div className="container px-4 mx-auto">{children}</div>;
 };

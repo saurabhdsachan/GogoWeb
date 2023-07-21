@@ -12,8 +12,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-primary)', ...fontFamily.sans],
-        serif: ['var(--font-secondary)', ...fontFamily.serif],
+        primary: ['var(--font-primary)', ...fontFamily.sans],
+        secondary: ['var(--font-secondary)', ...fontFamily.serif],
       },
     },
   },

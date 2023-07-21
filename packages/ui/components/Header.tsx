@@ -21,12 +21,12 @@ export const Header = ({ announcement }: { announcement: string }) => {
         <DrawerContent closeDrawer={closeDrawer} />
       </Drawer>
       {!!announcement && <Announcement announcement={announcement} />}
-      <header className="sticky top-0 z-50 bg-black">
+      <header className="sticky bg-white top-0 z-50">
         <div className="bg-transparent">
           <Container>
             <div className="flex py-4 justify-between items-center">
               <div className="flex lg:w-96">
-                <BrandFull light height={20} width={140} />
+                <BrandFull size={28} />
               </div>
               <div className="flex-grow justify-center items-center hidden md:flex">
                 <TopNav />

@@ -1,7 +1,14 @@
 {
   "extends": "tsconfig/nextjs.json",
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
   "compilerOptions": {
     "strict": true,
     "forceConsistentCasingInFileNames": true,
@@ -15,13 +22,32 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["./components/*"],
-      "@hooks/*": ["./hooks/*"],
-      "@context/*": ["./context/*"],
-      "@utils/*": ["./utils/*"],
-      "@mocks/*": ["./mocks/*"],
-      "@public/*": ["./public/*"],
-      "@store/*": ["./store/*"]
-    }
+      "@components/*": [
+        "./components/*"
+      ],
+      "@hooks/*": [
+        "./hooks/*"
+      ],
+      "@context/*": [
+        "./context/*"
+      ],
+      "@utils/*": [
+        "./utils/*"
+      ],
+      "@mocks/*": [
+        "./mocks/*"
+      ],
+      "@public/*": [
+        "./public/*"
+      ],
+      "@store/*": [
+        "./store/*"
+      ]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   }
 }

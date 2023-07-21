@@ -1,6 +1,6 @@
 import { Alert } from './Alert';
 import { Announcement } from './Announcement';
-import { AppFlexyWrapper } from './AppFlexyWrapper';
+import { AppFlexWrapper } from './AppFlexWrapper';
 import { BrandFull } from './BrandFull';
 import { BrandIcon } from './BrandIcon';
 import { Button } from './Button';
@@ -30,7 +30,7 @@ import { SuccessState } from './SuccessState';
 export {
   Alert,
   Announcement,
-  AppFlexyWrapper,
+  AppFlexWrapper,
   BrandFull,
   BrandIcon,
   Button,

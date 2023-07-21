@@ -1,3 +1,5 @@
+import '../styles/global.css';
+
 import React from 'react';
 
 import { ErrorState } from './ErrorState';
@@ -17,7 +19,7 @@ interface LayoutSubComponents {
 export const Layout: any & LayoutSubComponents = ({
   children,
 }: {
-  children: React.ReactNode;
+  children: string | JSX.Element | JSX.Element[];
 }) => (
   <>
     <a
@@ -44,7 +46,7 @@ Layout.BodyContent = ({
   isLoading,
   isError,
 }: {
-  children: React.ReactNode;
+  children: string | JSX.Element | JSX.Element[];
   isLoading: boolean;
   isError: boolean;
 }) => {
