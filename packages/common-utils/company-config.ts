@@ -4,7 +4,7 @@ const company = {
   product: 'Gogo',
   productWithTM: 'Gogo™',
   tagLine: 'Hyperlocal Simplified',
-  url: 'www.mygogo.app',
+  url: 'https://www.mygogo.app',
   country: 'IN',
   subject:
     'Start earning now! Open your online store in 1 click with 0 investment',

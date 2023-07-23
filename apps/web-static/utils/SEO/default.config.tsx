@@ -56,7 +56,7 @@ const twitterOptions = {
   handle: company?.social?.handles?.twitter,
   site: company?.social?.handles?.twitter,
   cardType: 'summary_large_image',
-  content: 'Get Instant Cash When It Matters',
+  content: company.tagLine + ':' + company.description,
   image: '',
 };
 
