@@ -1,6 +1,5 @@
 import SEOWrapper from '@components/SEO/SEOWrapper';
 import { HomePageSEO } from '@utils/SEO';
-import Head from 'next/head';
 import { Container, Layout } from 'ui';
 
 export default function Web() {
@@ -8,9 +7,6 @@ export default function Web() {
     <>
       <SEOWrapper seoProps={HomePageSEO.HomeSEO} />
       <Layout>
-        <Head>
-          <title>Hyper-local re-imagined | Gogo</title>
-        </Head>
         <Layout.Header announcement="A brand new experience awaits you. Learn more" />
         <Layout.BodyContent isError={false} isLoading={false}>
           <Container>

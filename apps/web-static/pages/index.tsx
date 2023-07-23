@@ -3,7 +3,6 @@ import Hero from '@components/Hero';
 import SEOWrapper from '@components/SEO/SEOWrapper';
 import Testimonials from '@components/Testimonials';
 import { HomePageSEO } from '@utils/SEO';
-import Head from 'next/head';
 import { Layout } from 'ui';
 
 export default function Web() {
@@ -11,9 +10,6 @@ export default function Web() {
     <>
       <SEOWrapper seoProps={HomePageSEO.HomeSEO} />
       <Layout>
-        <Head>
-          <title>Hyper-local re-imagined | Gogo</title>
-        </Head>
         <Layout.Header announcement="Ab kare business apni sharton par" />
         <Layout.BodyContent isError={false} isLoading={false}>
           <Hero />
