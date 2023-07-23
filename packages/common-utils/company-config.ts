@@ -1,6 +1,6 @@
 const company = {
   logo: 'w_200/v1685810830/logo_wjbge7.png',
-  name: 'Gogo',
+  name: 'Gogo App',
   product: 'Gogo',
   productWithTM: 'Gogo™',
   tagLine: 'Hyperlocal Simplified',
@@ -56,7 +56,7 @@ const company = {
     },
   },
   app: {
-    android: '',
+    android: 'https://play.google.com/store/apps/details?id=com.mygogo',
     ios: '',
     mac: '',
     windows: '',

@@ -1,3 +1,4 @@
+import { company } from 'common-utils';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Link from 'next/link';
 import { Button } from 'ui';
@@ -31,18 +32,17 @@ export const Header = ({ announcement }: { announcement: string }) => {
                   <BrandFull size={34} />
                 </Link>
                 <div>
-                  <h3 className="text-base font-medium leading-3">Gogo App</h3>
+                  <h3 className="text-base font-medium leading-3">
+                    {company.name}
+                  </h3>
                   <small className="text-gray-500 text-xs">
-                    Hyperlocal Simplified
+                    {company.tagLine}
                   </small>
                 </div>
               </div>
               <div className="flex-grow justify-center items-center hidden md:flex" />
               <div className="lg:w-96 justify-end items-center flex">
-                <a
-                  href="https://play.google.com/store/apps/details?id=com.mygogo"
-                  target="_blank"
-                >
+                <a href={company.app.android} target="_blank">
                   <Button variant="dark" label="Download App" />
                 </a>
               </div>
