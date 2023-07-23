@@ -14,16 +14,17 @@ export default function Web() {
         <Layout.Header announcement="A brand new experience awaits you. Learn more" />
         <Layout.BodyContent isError={false} isLoading={false}>
           <Container>
-            <div className="text-sm text-gray-700">
+            <div className="text-center max-w-4xl mx-auto pt-12 pb-12 sm:pt-28 sm:pb-28">
+              <h1 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight tracking-normal sm:text-4xl mb-5 text-gray-900">
+                PRIVACY POLICY
+              </h1>
               <p className="text-gray-500">
-                <strong>PRIVACY POLICY</strong>
-              </p>
-              <p className="text-gray-500">
-                <br />
                 Effective date: April 1, 2023
                 <br />
                 Last updated on: July 1, 2023
               </p>
+            </div>
+            <div className="text-sm text-gray-700">
               <h3 className="text-md font-bold mb-4 mt-8">1. GENERAL</h3>
               <p className="text-gray-500">
                 a. This Mobile Application with the name of Gogo. We are

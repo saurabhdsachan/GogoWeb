@@ -7,7 +7,7 @@ const navigation = {
     // { name: 'Blog', href: '#' },
     // { name: 'Jobs', href: '#' },
     // { name: 'Press', href: '#' },
-    // { name: 'Accessibility', href: '#' },
+    { name: 'Terms of Use', href: '/terms' },
     { name: 'Privacy Policy', href: '/privacy-policy' },
   ],
   social: [
