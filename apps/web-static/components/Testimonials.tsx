@@ -66,7 +66,7 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <div className="relative isolate bg-white pb-32 pt-24 sm:pt-32">
+    <div className="relative isolate bg-white pb-12 pt-24 sm:pt-32">
       <div
         className="absolute inset-x-0 top-1/2 -z-10 -translate-y-1/2 transform-gpu overflow-hidden opacity-30 blur-3xl"
         aria-hidden="true"

@@ -1,18 +1,9 @@
 import SEOWrapper from '@components/SEO/SEOWrapper';
 import { HomePageSEO } from '@utils/SEO';
 import Head from 'next/head';
-import { useEffect } from 'react';
 import { Container, Layout } from 'ui';
 
-import useFetcher from '../hooks/useFetcher';
-
 export default function Web() {
-  const { data, error, loading } = useFetcher({ endpoint: '/todos/1' });
-
-  useEffect(() => {
-    console.log(data, error, loading);
-  }, [data, error, loading]);
-
   return (
     <>
       <SEOWrapper seoProps={HomePageSEO.HomeSEO} />

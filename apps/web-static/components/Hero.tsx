@@ -30,12 +30,8 @@ const Hero = () => {
         <FadeIn>
           <div className="relative flex justify-center items-center">
             <motion.div
-              className="bottom-0 border border-gray-300 bg-transparent rounded-full"
-              style={{
-                height: 700,
-                width: 700,
-                scale,
-              }}
+              className="bottom-0 border border-gray-300 bg-transparent rounded-full hero-image"
+              style={{ height: 700, width: 700, scale }}
             />
             <motion.div className="absolute bottom-0" style={{ scale }}>
               <img
