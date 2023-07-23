@@ -1,6 +1,5 @@
-import { formatCurrency, imageLoader } from 'common-utils/helpers';
+import { formatCurrency } from 'common-utils/helpers';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import Image from 'next/image';
 import { Container, FadeIn, FadeInStagger } from 'ui';
 
 const Hero = () => {
@@ -39,9 +38,8 @@ const Hero = () => {
               }}
             />
             <motion.div className="absolute bottom-0" style={{ scale }}>
-              <Image
-                loader={imageLoader}
-                src="v1690025760/gogo-app/deviceframes_sdn86f"
+              <img
+                src="https://res.cloudinary.com/dxc5ccfcg/image/upload/v1690025760/gogo-app/deviceframes_sdn86f"
                 alt="hero"
                 width={700}
                 height={700}
