@@ -7,7 +7,6 @@ const featuredTestimonial = {
     city: 'Bijnaur - Uttar Pradesh',
     imageUrl:
       'https://res.cloudinary.com/dxc5ccfcg/image/upload/v1690111252/gogo-app/user-6_kt65ss.jpg',
-    logoUrl: 'https://tailwindui.com/img/logos/savvycal-logo-gray-900.svg',
   },
 };
 const testimonials = [
@@ -118,11 +117,6 @@ const Testimonials = () => {
                 </div>
                 <div className="text-gray-600">{`@${featuredTestimonial.author.city}`}</div>
               </div>
-              <img
-                className="h-10 w-auto flex-none"
-                src={featuredTestimonial.author.logoUrl}
-                alt=""
-              />
             </figcaption>
           </figure>
           {testimonials.map((columnGroup, columnGroupIdx) => (
