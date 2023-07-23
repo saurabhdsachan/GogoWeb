@@ -100,8 +100,8 @@ export default function Web() {
                 collected. This may include information such as the type of
                 mobile device, Operating System (OS) running on your device,
                 Internet Protocol (IP) address, unique user ID, access times,
-                device type, and language. We also collect information about how
-                you use Our products or services.
+                device type, device ID, and language. We also collect
+                information about how you use Our products or services.
               </p>
               <p className="text-gray-500">
                 d. We automatically collect purchase or content use history,
@@ -235,7 +235,9 @@ export default function Web() {
                 includes exchanging information with other companies and
                 organizations for fraud protection and credit risk reduction.
               </p>
-              <h3 className="text-md font-bold mb-4 mt-8">6. DATA SECURITY</h3>
+              <h3 className="text-md font-bold mb-4 mt-8">
+                6. DATA SECURITY / SAFETY
+              </h3>
               <p className="text-gray-500">
                 a. We take due care to protect customer data. Technical measures
                 are in place to prevent unauthorized or unlawful access to data
