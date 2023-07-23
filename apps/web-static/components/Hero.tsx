@@ -35,7 +35,7 @@ const Hero = () => {
             />
             <motion.div className="absolute bottom-0" style={{ scale }}>
               <img
-                src="https://res.cloudinary.com/dxc5ccfcg/image/upload/w_1400/v1690133179/gogo-app/gogo-app-screens_o5ciwc.webp"
+                src="https://res.cloudinary.com/dxc5ccfcg/image/upload/w_1400/v1690133707/gogo-app/gogo-app-screenshots_twakbb"
                 alt="Gogo app screen shot"
                 width={700}
                 height={700}
