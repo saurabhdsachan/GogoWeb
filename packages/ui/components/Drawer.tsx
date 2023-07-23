@@ -1,5 +1,5 @@
 import { Dialog, Transition } from '@headlessui/react';
-import React, { Fragment } from 'react';
+import React from 'react';
 
 export const Drawer = ({
   isOpen,
@@ -11,10 +11,9 @@ export const Drawer = ({
   children: React.ReactNode;
 }) => {
   return (
-    <Transition show={isOpen} as={Fragment}>
+    <Transition show={isOpen}>
       <Dialog open={isOpen} onClose={onClose} className="relative z-50">
         <Transition.Child
-          as={Fragment}
           enter="ease-out duration-300"
           enterFrom="opacity-0"
           enterTo="opacity-100"
@@ -25,7 +24,6 @@ export const Drawer = ({
           <div className="fixed inset-0 bg-black/30" />
         </Transition.Child>
         <Transition.Child
-          as={Fragment}
           enter="transition ease-out duration-300"
           enterFrom="opacity-0 transform translate-y-64"
           enterTo="opacity-100 transform translate-y-0"
@@ -35,6 +33,7 @@ export const Drawer = ({
         >
           <div className="fixed inset-0 overflow-y-auto custom-font">
             <div className="flex min-h-full p-6 bg-white">
+              {/* @ts-ignore */}
               <Dialog.Panel className="w-full">{children}</Dialog.Panel>
             </div>
           </div>

@@ -9,6 +9,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 module.exports = withBundleAnalyzer(
   withPWA({
+    output: 'export',
     swcMinify: true,
     compress: true,
     transpilePackages: ['ui'],
@@ -17,6 +18,7 @@ module.exports = withBundleAnalyzer(
     crossOrigin: 'anonymous',
     images: {
       domains: ['res.cloudinary.com', 'images.unsplash.com'],
+      unoptimized: true,
     },
-  })
+  }),
 );

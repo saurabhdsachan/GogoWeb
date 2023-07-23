@@ -1,6 +1,5 @@
 import { Listbox, Transition } from '@headlessui/react';
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid';
-import React, { Fragment } from 'react';
 
 export const DropDown = ({
   values,
@@ -28,7 +27,6 @@ export const DropDown = ({
           </span>
         </Listbox.Button>
         <Transition
-          as={Fragment}
           leave="transition ease-in duration-100"
           leaveFrom="opacity-100"
           leaveTo="opacity-0"

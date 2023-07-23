@@ -89,6 +89,7 @@ export const Carousel: CarouselSubComponents & any = ({
           centerPadding={centerPadding}
           ref={sliderRef}
         >
+          {/* @ts-ignore */}
           {children}
         </Slider>
       </div>

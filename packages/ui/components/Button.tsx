@@ -1,6 +1,6 @@
 import { classNames } from 'common-utils/helpers';
 import { Sizes } from 'common-utils/type';
-import React, { ReactNode } from 'react';
+import React from 'react';
 
 import lottieData from '../Lotties/button-loading.json';
 import { LottieAnimation } from './LottieAnimation';
@@ -23,10 +23,10 @@ export const Button = ({
   isLoading?: boolean;
   type?: 'button' | 'submit' | 'reset';
   full?: boolean;
-  label?: ReactNode;
+  label?: React.ReactNode | any;
   ariaLabel?: string;
-  leftIcon?: React.ReactNode;
-  rightIcon?: React.ReactNode;
+  leftIcon?: React.ReactNode | any;
+  rightIcon?: React.ReactNode | any;
   variant: 'ghost' | 'transparent' | 'light' | 'dark';
   noShadow?: boolean;
   onClick?: () => void;
@@ -63,7 +63,7 @@ export const Button = ({
         isLoading ? 'pointer-events-none cursor-wait' : 'cursor-default',
       )}
     >
-      {!isLoading && leftIcon && leftIcon}
+      {!isLoading && leftIcon}
       {label ? (
         <span className={classNames(isLoading ? 'opacity-0' : 'opacity-1')}>
           {label}
@@ -71,7 +71,7 @@ export const Button = ({
       ) : (
         <span className="sr-only">{ariaLabel}</span>
       )}
-      {!isLoading && rightIcon && rightIcon}
+      {!isLoading && rightIcon}
       {isLoading && (
         <span className="absolute inset-0 rounded-full bg-gray-900">
           <LottieAnimation animationData={lottieData} height={52} width={52} />

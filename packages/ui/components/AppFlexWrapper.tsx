@@ -1,7 +1,4 @@
-import { LockClosedIcon } from '@heroicons/react/24/outline';
 import { classNames } from 'common-utils/helpers';
-import { IChildren } from 'common-utils/type';
-import Link from 'next/link';
 import React, { Children } from 'react';
 
 import { Container } from './Container';
@@ -18,7 +15,7 @@ export const AppFlexWrapper: any & AppFlexWrapperComponents = ({
 }: {
   flow?: 't' | 'c' | 'b';
   withScroll?: boolean;
-  children?: IChildren;
+  children?: any;
 }) => {
   const childCount = Children.count(children);
 
@@ -35,7 +32,9 @@ export const AppFlexWrapper: any & AppFlexWrapperComponents = ({
       >
         {children && childCount > 1 ? Children.toArray(children)[0] : children}
       </div>
+
       {children && Children.toArray(children)[1] && (
+        // @ts-ignore: Unreachable code error
         <div className="flex-shrink">{Children?.toArray(children)[1]}</div>
       )}
     </div>
@@ -49,6 +48,7 @@ AppFlexWrapper.Body = ({ children }: { children: React.ReactNode }) => (
 AppFlexWrapper.Body.displayName = 'AppFlexWrapperBody';
 
 AppFlexWrapper.Footer = ({ children }: { children: React.ReactNode }) => (
+  // @ts-ignore: Unreachable code error
   <Container>{!!children && <div className="py-4">{children}</div>}</Container>
 );
 

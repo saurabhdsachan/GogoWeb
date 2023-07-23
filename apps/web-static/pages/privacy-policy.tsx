@@ -127,11 +127,12 @@ export default function Web() {
                 geolocation information.
               </p>
               <p className="text-gray-500">
-                g. We automatically collect information using "Cookies". Cookies
-                are small data files stored on your device. Among other things,
-                cookies help us to improve our App, our marketing activities,
-                and your experience. We use cookies to see which areas and
-                features are popular and to count visits to our App.
+                g. We automatically collect information using
+                &quot;Cookies&quot;. Cookies are small data files stored on your
+                device. Among other things, cookies help us to improve our App,
+                our marketing activities, and your experience. We use cookies to
+                see which areas and features are popular and to count visits to
+                our App.
               </p>
               <p className="text-gray-500">
                 h. By using this App, you are agreeing that We may advertise
