@@ -14,7 +14,7 @@ const Custom404 = () => {
           <div className="relative flex h-full w-full items-center justify-center">
             <Image
               loader={imageLoader}
-              src="v1675352490/beem-web/404.svg"
+              src=""
               alt="400"
               width={250}
               height={200}

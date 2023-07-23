@@ -112,7 +112,7 @@ export default function WebApp() {
           <AppFlexWrapper.Footer>
             <Confirmation
               open={open}
-              image="v1677843801/beem-web/logout.svg"
+              image=""
               title="Are you sure?"
               description="You will be logged out"
               onDismissLabel="No"

@@ -1,6 +1,5 @@
 import { ArrowDownTrayIcon } from '@heroicons/react/24/solid';
-import { imageLoader } from 'common-utils/helpers';
-import Image from 'next/image';
+import { formatCurrency } from 'common-utils/helpers';
 import React from 'react';
 import { Button } from 'ui';
 
@@ -13,9 +12,9 @@ export const PreFooter: React.FC = () => (
         <div className="flex-shrink">
           <div className="text-center md:text-left">
             <h3 className="text-5xl font-bold leading-normal">
-              Start beemin&apos; today
+              Start earning today
             </h3>
-            <p className="mb-10">Plans start as low as $1.97/month</p>
+            <p className="mb-10">{formatCurrency(0)} investment</p>
             <Button
               variant="dark"
               label="Download the app"

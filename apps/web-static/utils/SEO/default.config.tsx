@@ -13,7 +13,7 @@ const organizationSchema = {
   founders: [
     {
       '@type': 'Person',
-      name: 'Akshay Krishnaiah',
+      name: 'Nitin J',
     },
   ],
   address: {
@@ -43,7 +43,7 @@ const openGraph = {
   description: company.description,
   images: [
     {
-      url: `https://res.cloudinary.com/useline/image/upload/v1679638035/beem-web/unfurling_image.png`,
+      url: '',
       width: 1300,
       height: 750,
       alt: 'Gogo',
@@ -57,8 +57,7 @@ const twitterOptions = {
   site: company?.social?.handles?.twitter,
   cardType: 'summary_large_image',
   content: 'Get Instant Cash When It Matters',
-  image:
-    'https://res.cloudinary.com/useline/image/upload/v1679638035/beem-web/unfurling_image.png',
+  image: '',
 };
 
 //// Meta section
@@ -109,7 +108,7 @@ const additionalMetaTags = [
   { key: 'subject', name: 'subject', content: company.description },
   { key: 'url', name: 'url', content: company.url },
   { key: 'identifierURL', name: 'identifier-URL', content: company.url },
-  { key: 'category', name: 'category', content: company.keywords.join(',') },
+  { key: 'category', name: 'category', content: company?.keywords.join(',') },
   { key: 'coverage', name: 'coverage', content: 'Worldwide' },
   { key: 'mobileWebCapable', name: 'mobile-web-app-capable', content: 'yes' },
   { key: 'themeColor', name: 'theme-color', content: '#ffffff' },

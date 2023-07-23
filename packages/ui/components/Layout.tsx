@@ -1,15 +1,13 @@
 import '../styles/global.css';
 
-import { motion, MotionConfig, useReducedMotion } from 'framer-motion';
 import React from 'react';
 
 import { ErrorState } from './ErrorState';
 import { Footer } from './Footer';
-import { FadeInStagger } from './framerAnimation/fadeIn';
+import { GridPattern } from './GridPattern';
 import { Header } from './Header';
 import { LoadingState } from './LoadingState';
 import { PreFooter } from './PreFooter';
-import { GridPattern } from './GridPattern';
 
 interface LayoutSubComponents {
   Announcement: React.FC;

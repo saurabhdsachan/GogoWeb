@@ -17,8 +17,8 @@
 
 ## Apps & Packages
 
-- `apps/beem-web-app`: a sample documentation [Next.js]() app
-- `apps/beem-web-main`: a sample web [Next.js]() app
+- `apps/web-static`: a sample documentation [Next.js]() app
+- `apps/web-dashboard`: a sample web [Next.js]() app
 - `packages/ui`: a stub React component library shared by both `web` and `docs`
   applications
 - `packages/config`: shared `tailwindcss`, `eslint` configurations (includes
