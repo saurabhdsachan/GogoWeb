@@ -6,7 +6,7 @@ export const TopNav = () => {
       <ul className="flex flex-row text-sm">
         <li>
           <a
-            className="mx-2 px-2 py-1 text-base rounded-full text-gray-200 focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-slate-500"
+            className="mx-2 px-2 py-1 text-base rounded-full focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-slate-500"
             href="https://github.com/"
           >
             Features
@@ -14,7 +14,7 @@ export const TopNav = () => {
         </li>
         <li>
           <a
-            className="mx-2 px-2 py-1 text-base rounded-full text-gray-200 focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-slate-500"
+            className="mx-2 px-2 py-1 text-base rounded-full focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-slate-500"
             href="https://github.com/"
           >
             Pricing
@@ -22,7 +22,7 @@ export const TopNav = () => {
         </li>
         <li>
           <a
-            className="mx-2 px-2 py-1 text-base rounded-full text-gray-200 focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-slate-500"
+            className="mx-2 px-2 py-1 text-base rounded-full focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-slate-500"
             href="https://github.com/"
           >
             About
@@ -30,7 +30,7 @@ export const TopNav = () => {
         </li>
         <li>
           <a
-            className="mx-2 px-2 py-1 text-base rounded-full text-gray-200 focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-slate-500"
+            className="mx-2 px-2 py-1 text-base rounded-full focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-slate-500"
             href="https://github.com/"
           >
             Blog
@@ -38,7 +38,7 @@ export const TopNav = () => {
         </li>
         <li>
           <a
-            className="mx-2 px-2 py-1 text-base rounded-full text-gray-200 focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-slate-500"
+            className="mx-2 px-2 py-1 text-base rounded-full focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-slate-500"
             href="https://github.com/"
           >
             Help

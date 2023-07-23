@@ -1,12 +1,15 @@
 import '../styles/global.css';
 
+import { motion, MotionConfig, useReducedMotion } from 'framer-motion';
 import React from 'react';
 
 import { ErrorState } from './ErrorState';
 import { Footer } from './Footer';
+import { FadeInStagger } from './framerAnimation/fadeIn';
 import { Header } from './Header';
 import { LoadingState } from './LoadingState';
 import { PreFooter } from './PreFooter';
+import { GridPattern } from './GridPattern';
 
 interface LayoutSubComponents {
   Announcement: React.FC;
@@ -68,6 +71,11 @@ Layout.BodyContent = ({
     return (
       <main id="main" className="min-h-screen overflow-hidden">
         {children}
+        <GridPattern
+          className="absolute inset-x-0 -top-14 -z-10 h-[1000px] w-full fill-neutral-50 stroke-neutral-950/5 [mask-image:linear-gradient(to_bottom_left,white_40%,transparent_50%)]"
+          yOffset={-96}
+          interactive
+        />
       </main>
     );
   }

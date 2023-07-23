@@ -15,6 +15,8 @@ import { DropDown } from './DropDown';
 import { EmptyState } from './EmptyState';
 import { ErrorState } from './ErrorState';
 import { Footer } from './Footer';
+import { FadeIn, FadeInStagger } from './framerAnimation/fadeIn';
+import InViewPort from './framerAnimation/inViewPort';
 import { GogoSheet } from './GogoSheet';
 import { Header } from './Header';
 import { Input } from './Input';
@@ -43,10 +45,13 @@ export {
   DropDown,
   EmptyState,
   ErrorState,
+  FadeIn,
+  FadeInStagger,
   Footer,
   GogoSheet,
   Header,
   Input,
+  InViewPort,
   Layout,
   LoadingState,
   LottieAnimation,

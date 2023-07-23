@@ -1,11 +1,11 @@
+import Features from '@components/Features';
 import Hero from '@components/Hero';
 import SEOWrapper from '@components/SEO/SEOWrapper';
-import { ChevronDoubleDownIcon } from '@heroicons/react/24/solid';
+import Testimonials from '@components/Testimonials';
 import { HomePageSEO } from '@utils/SEO';
 import Head from 'next/head';
 import { useEffect } from 'react';
-import { ScrollTrigger } from 'react-gsap';
-import { Container, Layout } from 'ui';
+import { Layout } from 'ui';
 
 import useFetcher from '../hooks/useFetcher';
 
@@ -21,18 +21,14 @@ export default function Web() {
       <SEOWrapper seoProps={HomePageSEO.HomeSEO} />
       <Layout>
         <Head>
-          <title>Instant cash for emergencies | Gogo</title>
+          <title>Hyper-local re-imagined | Gogo</title>
         </Head>
-        <Layout.Header announcement="A brand new experience awaits you. Learn more" />
+        <Layout.Header announcement="Ab kare business apni sharton par" />
         <Layout.BodyContent isError={false} isLoading={false}>
-          <ScrollTrigger start="-500px center" end="-100px center">
-            <Hero />
-            <Container>
-              <ChevronDoubleDownIcon className="h-5 w-5 mx-auto mt-4 hidden md:block bounce" />
-            </Container>
-          </ScrollTrigger>
+          <Hero />
+          <Features />
+          <Testimonials />
         </Layout.BodyContent>
-        <Layout.PreFooter />
         <Layout.Footer />
       </Layout>
     </>

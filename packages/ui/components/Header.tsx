@@ -1,49 +1,55 @@
-import { Bars3Icon } from '@heroicons/react/24/solid';
-import { useState } from 'react';
-import { Button, Drawer } from 'ui';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import Link from 'next/link';
+import { Button } from 'ui';
 
 import { Announcement } from './Announcement';
 import { BrandFull } from './BrandFull';
 import { Container } from './Container';
-import { DrawerContent } from './DrawerContent';
-import { TopNav } from './TopNav';
 
 export const Header = ({ announcement }: { announcement: string }) => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const { scrollY } = useScroll();
 
-  const openDrawer = () => setIsOpen(true);
-
-  const closeDrawer = () => setIsOpen(false);
+  const backgroundColor = useTransform(
+    scrollY,
+    [0, 100],
+    ['rgba(255,255,255,0)', 'rgba(255,255,255,0.8)'],
+  );
 
   return (
     <>
-      <Drawer isOpen={isOpen} onClose={closeDrawer}>
-        <DrawerContent closeDrawer={closeDrawer} />
-      </Drawer>
       {!!announcement && <Announcement announcement={announcement} />}
-      <header className="sticky bg-white top-0 z-50">
+
+      <motion.header
+        className="sticky top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50"
+        style={{ background: backgroundColor }}
+      >
         <div className="bg-transparent">
           <Container>
             <div className="flex py-4 justify-between items-center">
-              <div className="flex lg:w-96">
-                <BrandFull size={28} />
+              <div className="flex lg:w-96 space-x-4 items-center">
+                <Link href="/">
+                  <BrandFull size={34} />
+                </Link>
+                <div>
+                  <h3 className="text-base font-medium leading-3">Gogo App</h3>
+                  <small className="text-gray-500 text-xs">
+                    Hyperlocal Simplified
+                  </small>
+                </div>
               </div>
-              <div className="flex-grow justify-center items-center hidden md:flex">
-                <TopNav />
+              <div className="flex-grow justify-center items-center hidden md:flex" />
+              <div className="lg:w-96 justify-end items-center flex">
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.mygogo"
+                  target="_blank"
+                >
+                  <Button variant="dark" label="Download App" />
+                </a>
               </div>
-              <div className="lg:w-96 justify-end items-center hidden md:flex">
-                <Button variant="dark" label="Download App" />
-              </div>
-              <button
-                onClick={openDrawer}
-                className="bg-white border shadow-lg rounded-full w-10 h-10 flex justify-center items-center md:hidden focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-slate-500 hover:border-slate-500"
-              >
-                <Bars3Icon className="w-5 h-5" />
-              </button>
             </div>
           </Container>
         </div>
-      </header>
+      </motion.header>
     </>
   );
 };

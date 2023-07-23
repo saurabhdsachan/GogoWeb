@@ -1,35 +1,26 @@
 import { FadeIn, FadeInStagger } from '@components/framerAnimation/fadeIn';
 import { HighLevelPerformance } from '@components/graphs';
 import { ChevronRightIcon } from '@heroicons/react/24/solid';
-import { imageLoader } from 'common-utils/helpers';
-import { Sizes } from 'common-utils/type';
 import Head from 'next/head';
-import router from 'next/router';
+import Link from 'next/link';
 import { useState } from 'react';
-import {
-  AppFlexWrapper,
-  Button,
-  Confirmation,
-  Container,
-  EmptyState,
-  Layout,
-} from 'ui';
+import { AppFlexWrapper, Confirmation, Container, Layout } from 'ui';
 
 const people = [
   {
     label: 'Add custom products',
     imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      'https://res.cloudinary.com/dxc5ccfcg/image/upload/w_40/v1690000430/gogo-app/icons/boxadd_jsvlqd.png',
   },
   {
     label: 'Update product price',
     imageUrl:
-      'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      'https://res.cloudinary.com/dxc5ccfcg/image/upload/w_40/v1690000430/gogo-app/icons/moneychange_ozzuwr.png',
   },
   {
     label: 'Add delivery rules',
     imageUrl:
-      'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      'https://res.cloudinary.com/dxc5ccfcg/image/upload/w_40/v1690000434/gogo-app/icons/truck-fast_s6hnxl.png',
   },
 ];
 
@@ -42,7 +33,7 @@ export default function WebApp() {
   return (
     <Layout>
       <Head>
-        <title>Instant cash for emergencies | Gogo</title>
+        <title>Hypersonic growth for hyperlocal | Gogo</title>
       </Head>
       <Layout.Header announcement="A brand new experience awaits you. Learn more" />
       <Layout.BodyContent isError={false} isLoading={false}>
@@ -93,23 +84,25 @@ export default function WebApp() {
                 <ul role="list" className="divide-y divide-gray-100">
                   {people?.map((person) => (
                     <FadeIn key={person.label}>
-                      <li className="flex justify-between gap-x-2 py-4">
-                        <div className="flex gap-x-3">
-                          <img
-                            className="h-6 w-6 flex-none rounded-full bg-gray-50"
-                            src={person.imageUrl}
-                            alt=""
-                          />
-                          <div className="min-w-0 flex-auto">
-                            <p className="leading-6 text-gray-900">
-                              {person.label}
-                            </p>
+                      <Link href={'/delivery-rule'}>
+                        <li className="flex justify-between gap-x-2 py-4">
+                          <div className="flex gap-x-3">
+                            <img
+                              className="h-6 w-6 flex-none rounded-full bg-gray-50"
+                              src={person.imageUrl}
+                              alt=""
+                            />
+                            <div className="min-w-0 flex-auto">
+                              <p className="leading-6 text-gray-900">
+                                {person.label}
+                              </p>
+                            </div>
                           </div>
-                        </div>
-                        <div className="flex flex-col items-end">
-                          <ChevronRightIcon className="h-4 w-4" />
-                        </div>
-                      </li>
+                          <div className="flex flex-col items-end">
+                            <ChevronRightIcon className="h-4 w-4" />
+                          </div>
+                        </li>
+                      </Link>
                     </FadeIn>
                   ))}
                 </ul>
