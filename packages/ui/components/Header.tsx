@@ -27,19 +27,19 @@ export const Header = ({ announcement }: { announcement: string }) => {
         <div className="bg-transparent">
           <Container>
             <div className="flex py-4 justify-between items-center">
-              <div className="flex lg:w-96 space-x-4 items-center">
-                <Link href="/">
+              <Link href="/">
+                <div className="flex lg:w-96 space-x-4 items-center">
                   <BrandFull size={34} />
-                </Link>
-                <div>
-                  <h3 className="text-base font-medium leading-3">
-                    {company.name}
-                  </h3>
-                  <small className="text-gray-500 text-xs">
-                    {company.tagLine}
-                  </small>
+                  <div>
+                    <h3 className="text-base font-medium leading-3">
+                      {company.name}
+                    </h3>
+                    <small className="text-gray-500 text-xs">
+                      {company.tagLine}
+                    </small>
+                  </div>
                 </div>
-              </div>
+              </Link>
               <div className="flex-grow justify-center items-center hidden md:flex" />
               <div className="lg:w-96 justify-end items-center flex">
                 <a href={company.app.android} target="_blank">
