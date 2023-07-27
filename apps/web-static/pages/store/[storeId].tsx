@@ -2,12 +2,15 @@ import SEOWrapper from '@components/SEO/SEOWrapper';
 import useFetcher from '@hooks/useFetcher';
 import { HomePageSEO } from '@utils/SEO';
 import { company } from 'common-utils';
+import { AlertTypes } from 'common-utils/type';
+import { useRouter } from 'next/router';
 import { useEffect } from 'react';
-import { Container, FadeIn, FadeInStagger, Layout } from 'ui';
+import { Alert, Container, FadeIn, FadeInStagger, Layout } from 'ui';
 
 const StoreView = () => {
+  const router = useRouter();
   const { data, loading, error } = useFetcher({
-    endpoint: 'stores/81?populate[0]=qrcodeImage',
+    endpoint: `stores/${router.query.storeId}?populate[0]=qrcodeImage`,
   });
 
   useEffect(() => {
@@ -17,6 +20,10 @@ const StoreView = () => {
   }, []);
 
   const response = data?.data?.data || data?.data;
+
+  if (error) {
+    return <Alert message="Something went wrong" type={AlertTypes.INFO} />;
+  }
 
   return (
     <>
