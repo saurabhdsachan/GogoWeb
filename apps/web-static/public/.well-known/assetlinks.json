@@ -1,0 +1,12 @@
+
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.mygogo",
+      "sha256_cert_fingerprints":
+        ["B3:98:4F:06:6F:C7:77:46:BF:10:2A:DA:EA:92:E9:26:4B:BF:B1:59:BD:FD:20:9F:37:22:F6:55:32:B1:44:D5"]
+    }
+  }
+]
